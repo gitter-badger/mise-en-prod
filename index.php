@@ -6,7 +6,7 @@
 <title>On met en production ?</title>
 <meta name="Content-Type" content="UTF-8">
 <meta name="Content-Language" content="fr">
-<meta name="Description" content="Le mini-site qui t'indique qui tu peut mettre en production selon le jour de la semaine avec une bonne dose de gif">
+<meta name="Description" content="Le mini-site qui t'indique si tu peux mettre en production selon le jour de la semaine avec une bonne dose de Gifs">
 <meta name="Keywords" content="gif, mise, en, prod, mise en prod, en prod, lundi, mardi, mercredi, jeudi, vendredi, samedi, dimanche, giffy, giphy, production, fun, lol, drole, ">
 <meta name="Subject" content="Mise en production">
 <meta name="Copyright" content="original idea by estcequonmetenprod.info">
@@ -20,7 +20,8 @@
 <meta name="Distribution" content="global">
 <meta name="Geography" content="63000">
 <meta name="Category" content="games">
-
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" type="text/css" href="style.css">
 <style>
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Tajawal');
 </style>
@@ -30,7 +31,7 @@
 
 <?php
 
-	echo"<p style='text-align:center; margin-top:5%; font-size:3.5em; text-decoration: underline; font-family: Open Sans, sans-serif;'>Est-ce qu'on met en prod aujourd'hui ?</p>";
+	echo"<p class='titre'>Est-ce qu'on met en prod aujourd'hui ?</p>";
 
 if (date("l")=="Monday"){	
 	
@@ -46,9 +47,9 @@ if (date("l")=="Monday"){
 	);
 	$rand_keys = array_rand($input, 2);
 	
-	echo'<p style="text-align:center; margin-top:-3%; font-size:5em; color: green; font-family: Tajawal, sans-serif;">On est <b>lundi<b></p>';
-	echo'<p style="text-align:center; margin-top: -5%; font-size:1em; font-family: Montserrat, sans-serif;"><b><i>OUI tu peut mettre en prod<i><b></p>';
-	echo'<p style="text-align:center;">'.$input[$rand_keys[0]].'</p>';
+	echo'<p class="jours">On est <b>lundi<b></p>';
+	echo'<p class="commentairePositif"><b><i>OUI tu peut mettre en prod<i><b></p>';
+	echo'<p class="gifs">'.$input[$rand_keys[0]].'</p>';
 	
 }else if (date("l")=="Tuesday"){
 	
@@ -64,9 +65,9 @@ if (date("l")=="Monday"){
 	);
 	$rand_keys = array_rand($input, 2);
 	
-	echo'<p style="text-align:center; margin-top:-3%; font-size:5em; color: green; font-family: Tajawal, sans-serif;">On est <b>mardi<b></p>';
-	echo'<p style="text-align:center; margin-top: -5%; font-size:1em; font-family: Montserrat, sans-serif;"><b><i>OUI tu peut mettre en prod<i><b></p>';
-	echo'<p style="text-align:center;">'.$input[$rand_keys[0]].'</p>';
+	echo'<p class="jours">On est <b>mardi<b></p>';
+	echo'<p class="commentairePositif"><b><i>OUI tu peut mettre en prod<i><b></p>';
+	echo'<p class="gifs">'.$input[$rand_keys[0]].'</p>';
 }else if (date("l")=="Wednesday"){
 	
 	//gif array + random generation
@@ -81,9 +82,9 @@ if (date("l")=="Monday"){
 	);
 	$rand_keys = array_rand($input, 2);
 	
-	echo'<p style="text-align:center; margin-top:-3%; font-size:5em; color: green; font-family: Tajawal, sans-serif;">On est <b>mercredi<b></p>';
+	echo'<p class="jours">On est <b>mercredi<b></p>';
 	echo'<p style="text-align:center; margin-top: -5%; font-size:1em; font-family: Montserrat, sans-serif;"><b><i>OUI tu peut mettre en prod<i><b></p>';
-	echo'<p style="text-align:center;">'.$input[$rand_keys[0]].'</p>';
+	echo'<p class="gifs">'.$input[$rand_keys[0]].'</p>';
 }else if (date("l")=="Thursday"){
 	
 	//gif array + random generation
@@ -98,9 +99,9 @@ if (date("l")=="Monday"){
 	);
 	$rand_keys = array_rand($input, 2);	
 	
-	echo'<p style="text-align:center; margin-top:-3%; font-size:5em; color: orange; font-family: Tajawal, sans-serif;" >On est <b>jeudi<b></p>';
-	echo'<p style="text-align:center; margin-top: -5%; font-size:1em; font-family: Montserrat, sans-serif;" ><b><i>Hmm, tu penses que ca passe ?<i><b></p>';
-	echo'<p style="text-align:center;">'.$input[$rand_keys[0]].'</p>';
+	echo'<p class="jours" >On est <b>jeudi<b></p>';
+	echo'<p class="commentairePositif" ><b><i>Hmm, tu penses que ca passe ?<i><b></p>';
+	echo'<p class="gifs">'.$input[$rand_keys[0]].'</p>';
 }else if (date("l")=="Friday"){
 
 	//gif array + random generation
@@ -115,9 +116,9 @@ if (date("l")=="Monday"){
 	);
 	$rand_keys = array_rand($input, 2);
 
-	echo'<p style="text-align:center; margin-top:-3%; font-size:5em; color: red; font-family: Tajawal, sans-serif;"><b>ON EST VENDREDI<b></p>';
-	echo'<p style="text-align:center;  margin-top: -5%; font-size:1em; color: red; font-family: Montserrat, sans-serif;"><b>NON NON NON NON<b></p>';
-	echo'<p style="text-align:center;">'.$input[$rand_keys[0]].'</p>';
+	echo'<p class="vendredi"><b>ON EST VENDREDI<b></p>';
+	echo'<p class="commentaireVendredi"><b>NON NON NON NON<b></p>';
+	echo'<p class="gifs">'.$input[$rand_keys[0]].'</p>';
 }else if (date("l")=="Saturday"){
 
 	//gif array + random generation
@@ -132,9 +133,9 @@ if (date("l")=="Monday"){
 	);
 	$rand_keys = array_rand($input, 2);
 
-	echo'<p style="text-align:center; margin-top:-3%; font-size:5em; font-family: Tajawal, sans-serif;" >On est <b>samedi<b></p>';
-	echo'<p style="text-align:center; margin-top: -5%; font-size:1em; font-family: Montserrat, sans-serif;" ><b>Tu bosses ?<b></p>';
-	echo'<p style="text-align:center;">'.$input[$rand_keys[0]].'</p>';
+	echo'<p class="jours">On est <b>samedi<b></p>';
+	echo'<p class="commentairePositif"><b>Tu bosses ?<b></p>';
+	echo'<p class="gifs">'.$input[$rand_keys[0]].'</p>';
 }else if (date("l")=="Sunday"){
 
 	//gif array + random generation
@@ -149,9 +150,9 @@ if (date("l")=="Monday"){
 	);
 	$rand_keys = array_rand($input, 2);
 
-	echo'<p style="text-align:center; margin-top:-3%; font-size:5em; font-family: Tajawal, sans-serif;">On est <b>Dimanche<b></p>';
-	echo'<p style="text-align:center; margin-top: -5%; font-size:1em; font-family: Montserrat, sans-serif;"><b>Le jour du seigneur on ne travail pas normalement...<b></p>';
-	echo'<p style="text-align:center;">'.$input[$rand_keys[0]].'</p>';
+	echo'<p class="jours">On est <b>Dimanche<b></p>';
+	echo'<p class="commentairePositif"><b>Le jour du seigneur on ne travail pas normalement...<b></p>';
+	echo'<p class="gifs">'.$input[$rand_keys[0]].'</p>';
 } else {
 	echo'ERREUR';
 }
@@ -175,9 +176,9 @@ if (date("l")=="Monday"){
 	
 	// affichage page
 	
-	echo'<p style="text-align: center; font-size:0.8em; font-family: Open Sans, sans-serif;">2018 - page vues '.$compte.' fois</p>';
-	echo'<p style="text-align: center; font-size:0.7em; font-family: Open Sans, sans-serif;"><a href="https://www.estcequonmetenprodaujourdhui.info/">idée originale : estcequonmetenprodaujourdhui.info</a></p>';
-	echo'<p style="text-align: center; font-size:0.7em; font-family: Open Sans, sans-serif;"><a href="https://github.com/MehdyDriouech/mise-en-prod">Github </a></p>';
+	echo'<p class="compteurs">2018 - page vues '.$compte.' fois</p>';
+	echo'<p class="mentions"><a href="https://www.estcequonmetenprodaujourdhui.info/">idée originale : estcequonmetenprodaujourdhui.info</a></p>';
+	echo'<p class="mentions"><a href="https://github.com/MehdyDriouech/mise-en-prod">Github </a></p>';
 
 	
 ?>

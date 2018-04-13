@@ -1,0 +1,55 @@
+
+.titre {
+	text-align:center;
+	margin-top:5%;
+	font-size:3.5em;
+	text-decoration: underline;
+	font-family: Open Sans, sans-serif;
+}
+
+.jours{
+	text-align:center;
+	margin-top:-3%;
+	font-size:5em;
+	color: green;
+	font-family: Tajawal, sans-serif;
+}
+
+.commentairePositif{
+	text-align:center;
+	margin-top: -5%;
+	font-size:1em;
+	font-family: Montserrat, sans-serif;
+}
+
+.vendredi{
+	text-align:center;
+	margin-top:-3%;
+	font-size:5em;
+	color: red;
+	font-family: Tajawal, sans-serif;
+}
+
+.commentaireVendredi{
+	text-align:center;
+	margin-top: -5%;
+	font-size:1em;
+	color: red;
+	font-family: Montserrat, sans-serif;
+}
+
+.gifs{
+	text-align:center;
+}
+
+.compteurs{
+	text-align: center;
+	font-size:0.8em;
+	font-family: Open Sans, sans-serif;
+}
+
+.mentions{
+	text-align: center;
+	font-size:0.7em;
+	font-family: Open Sans, sans-serif;
+}
