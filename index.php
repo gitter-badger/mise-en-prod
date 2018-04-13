@@ -177,7 +177,7 @@ if (date("l")=="Monday"){
 	
 	echo'<p style="text-align: center; font-size:0.8em; font-family: Open Sans, sans-serif;">2018 - page vues '.$compte.' fois</p>';
 	echo'<p style="text-align: center; font-size:0.7em; font-family: Open Sans, sans-serif;"><a href="https://www.estcequonmetenprodaujourdhui.info/">idée originale : estcequonmetenprodaujourdhui.info</a></p>';
-	echo'<p style="text-align: center; font-size:0.7em; font-family: Open Sans, sans-serif;"><a href="https://github.com/MehdyDriouech/mise-en-prod">Modifier - Distribuer - Améliorer le code</a></p>';
+	echo'<p style="text-align: center; font-size:0.7em; font-family: Open Sans, sans-serif;"><a href="https://github.com/MehdyDriouech/mise-en-prod">Github </a></p>';
 
 	
 ?>
