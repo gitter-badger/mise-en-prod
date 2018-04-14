@@ -174,6 +174,24 @@ if (date("l")=="Monday"){
 	fputs($compteur_f, $compte);
 	fclose($compteur_f);
 	
+	//adresse IP du visiteur
+	
+	$file="ip.txt";
+    $currentFile=fopen($file,'a');
+    $current="";
+    $today = new DateTime('NOW');
+    $today = $today->format('d/m/Y - H:i:s');
+    $ipAdress = $_SERVER['REMOTE_ADDR'];		
+            
+    try {                  
+			$current .= $today ." - ". $ipAdress."\n";		                
+        } catch (Exception $e) {
+			$current .= $today.' URL HS - Exception reçue'.'\n' ; 
+        }
+	fwrite($currentFile,$current);
+	fclose($currentFile);
+	echo ""; //close call
+	
 	// affichage page
 	
 	echo'<p class="compteurs">2018 - page vues '.$compte.' fois</p>';
