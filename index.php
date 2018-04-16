@@ -159,15 +159,16 @@ if (date("l")=="Monday"){
 	echo'ERREUR';
 }
 
-    compteurvisite();
-    IpVisiteur();
+    //appels fonctions de tracking
+        compteurvisite();
+        IpVisiteur();
 
 	
-	// affichage page
+	// récupération infos compteurs
         $compteur_f = fopen('compteur.txt', 'r+');
         $compte = fgets($compteur_f);
 
-    //
+    // affichage page
 
 	echo'<p class="compteurs">2018 - page vues '.$compte.' fois</p>';
 	echo'<p class="mentions"><a href="https://www.estcequonmetenprodaujourdhui.info/">idée originale : estcequonmetenprodaujourdhui.info</a></p>';
