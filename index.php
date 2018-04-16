@@ -164,7 +164,11 @@ if (date("l")=="Monday"){
 
 	
 	// affichage page
-	
+        $compteur_f = fopen('compteur.txt', 'r+');
+        $compte = fgets($compteur_f);
+
+    //
+
 	echo'<p class="compteurs">2018 - page vues '.$compte.' fois</p>';
 	echo'<p class="mentions"><a href="https://www.estcequonmetenprodaujourdhui.info/">idée originale : estcequonmetenprodaujourdhui.info</a></p>';
 	echo'<p class="mentions"><a href="https://github.com/MehdyDriouech/mise-en-prod">Github </a></p>';
