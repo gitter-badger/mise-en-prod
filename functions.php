@@ -85,7 +85,7 @@ function RandomGiphy($tag){
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         $response = curl_exec($ch);
         $resultData = json_decode($response, true);
-        $rand = rand(0,10);
+        $rand = rand(0,20);
 
 
         $gifGet=$resultData[data][$rand][embed_url];
