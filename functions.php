@@ -89,7 +89,7 @@ function RandomGiphy($tag){
 
 
         $gifGet=$resultData[data][$rand][embed_url];
-        echo "<p style='display: block; margin: 0 auto; width: 25%;'>"."<iframe src=".$gifGet." width='500' height='500' frameBorder=\"0\"></iframe>"."</p>";
+        echo "<p style='display: block; margin: 0 auto; width: 500px;'>"."<iframe src=".$gifGet." width='500' height='500' frameBorder=\"0\"></iframe>"."</p>";
 
     } catch (Exception $e) {
         echo 'Exception reçue : ',  $e->getMessage(), "\n";
