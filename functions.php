@@ -16,6 +16,8 @@ function compteurvisite(){
     fseek($compteur_f, 0);
     fputs($compteur_f, $compte);
     fclose($compteur_f);
+
+    // return $compte;
 }
 
 function IpVisiteur(){
