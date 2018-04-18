@@ -43,7 +43,7 @@ if (date("l")=="Monday"){
     $rand_keys = $tags[array_rand($tags, 1)];
 
     echo'<p class="jours" aria-label="Lundi">On est <b>Lundi<b></p>';
-    echo'<p class="commentairePositif" aria-label="Commentaire mercredi"><b>OUI tu peux<b></p>';
+    echo'<p class="commentairePositif" aria-label="Commentaire mercredi"><b>OUI tu peux :D<b></p>';
     echo'<p class="gifs">'.RandomGiphy($rand_keys).'</p>';
 	
 }else if (date("l")=="Tuesday"){
@@ -53,7 +53,7 @@ if (date("l")=="Monday"){
     $rand_keys = $tags[array_rand($tags, 1)];
 
     echo'<p class="jours" aria-label="Mardi">On est <b>Mardi<b></p>';
-    echo'<p class="commentairePositif" aria-label="Commentaire mercredi"><b>OUI tu peux<b></p>';
+    echo'<p class="commentairePositif" aria-label="Commentaire mercredi"><b>OUI tu peux :D<b></p>';
     echo'<p class="gifs">'.RandomGiphy($rand_keys).'</p>';
 
 }else if (date("l")=="Wednesday"){
@@ -64,7 +64,7 @@ if (date("l")=="Monday"){
     $rand_keys = $tags[array_rand($tags, 1)];
 
     echo'<p class="jours" aria-label="Mercredi">On est <b>Mercredi<b></p>';
-    echo'<p class="commentairePositif" aria-label="Commentaire mercredi"><b>OUI tu peux<b></p>';
+    echo'<p class="commentairePositif" aria-label="Commentaire mercredi"><b>OUI tu peux :)<b></p>';
     echo'<p class="gifs">'.RandomGiphy($rand_keys).'</p>';
 
 }else if (date("l")=="Thursday"){
@@ -91,17 +91,17 @@ if (date("l")=="Monday"){
 }else if (date("l")=="Saturday"){
 
     //gif array + random generation
-    $tags = array('happy','yeah');
+    $tags = array('happy','saturday');
     $rand_keys = $tags[array_rand($tags, 1)];
 
-    echo'<p class="jours" aria-label="Samedi">On est <b>samedi<b></p>';
-    echo'<p class="commentairePositif" aria-label="commentaire Samedi"><b>Tu bosses ?<b></p>';
+    echo'<p class="jours" aria-label="Samedi">On est <b>Samedi<b></p>';
+    echo'<p class="commentairePositif" aria-label="commentaire Samedi"><b>On ne bosse pas !<b></p>';
     echo'<p class="gifs">'.RandomGiphy($rand_keys).'</p>';
 
 }else if (date("l")=="Sunday"){
 
 	//gif array + random generation
-    $tags = array('happy','yeah');
+    $tags = array('happy','alleluia','sunday');
     $rand_keys = $tags[array_rand($tags, 1)];
 
 	echo'<p class="jours" aria-label="Dimanche">On est <b>Dimanche<b></p>';
