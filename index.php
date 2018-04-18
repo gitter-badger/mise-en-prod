@@ -44,7 +44,7 @@ if (date("l")=="Monday"){
     $emojiHtml = preg_replace("/\\\\u([0-9A-F]{2,5})/i", "&#x$1;", $text);
 
     //gif array + random generation
-    $tags = array('happy','yeah','yes','ha');
+    $tags = array('happy','yeah','yes','ha','ok','cool');
     $rand_keys = $tags[array_rand($tags, 1)];
 
     echo'<p class="jours" aria-label="Lundi">On est <b>Lundi<b></p>';
@@ -59,7 +59,7 @@ if (date("l")=="Monday"){
     $emojiHtml = preg_replace("/\\\\u([0-9A-F]{2,5})/i", "&#x$1;", $text);
 
     //gif array + random generation
-    $tags = array('happy','yeah','yes','ha');
+    $tags = array('happy','yeah','yes','ha','ok','party');
     $rand_keys = $tags[array_rand($tags, 1)];
 
     echo'<p class="jours" aria-label="Mardi">On est <b>Mardi<b></p>';
@@ -74,7 +74,7 @@ if (date("l")=="Monday"){
 
     //gif array + random generation
 
-    $tags = array('happy','yeah','yes','ha');
+    $tags = array('happy','yeah','yes','ha','ok','dance');
     $rand_keys = $tags[array_rand($tags, 1)];
 
     echo'<p class="jours" aria-label="Mercredi">On est <b>Mercredi<b></p>';
@@ -89,7 +89,7 @@ if (date("l")=="Monday"){
     $emojiHtml = preg_replace("/\\\\u([0-9A-F]{2,5})/i", "&#x$1;", $text);
 
     //gif array + random generation
-    $tags = array('maybe','sure','ahem','well','think');
+    $tags = array('maybe','sure','ahem','well','think','so','whatever');
     $rand_keys = $tags[array_rand($tags, 1)];
 
     echo'<p class="jeudi" aria-label="Jeudi">On est <b>Jeudi<b></p>';
@@ -104,7 +104,7 @@ if (date("l")=="Monday"){
     $emojiHtml = preg_replace("/\\\\u([0-9A-F]{2,5})/i", "&#x$1;", $text);
 
     //gif array + random generation
-    $tags = array('nope','no','hell','fire','stop','calmdown');
+    $tags = array('nope','no','hell','fire','stop','calmdown','annoyed','ugh','eyeroll');
     $rand_keys = $tags[array_rand($tags, 1)];
 
     echo'<p class="vendredi" aria-label="Vendredi"<b>ON EST VENDREDI<b></p>';
@@ -119,7 +119,7 @@ if (date("l")=="Monday"){
     $emojiHtml = preg_replace("/\\\\u([0-9A-F]{2,5})/i", "&#x$1;", $text);
 
     //gif array + random generation
-    $tags = array('happy','saturday');
+    $tags = array('happy','saturday','weekend','nice');
     $rand_keys = $tags[array_rand($tags, 1)];
 
     echo'<p class="jours" aria-label="Samedi">On est <b>Samedi<b></p>';
@@ -133,7 +133,7 @@ if (date("l")=="Monday"){
     $emojiHtml = preg_replace("/\\\\u([0-9A-F]{2,5})/i", "&#x$1;", $text);
 
 	//gif array + random generation
-    $tags = array('happy','alleluia','sunday');
+    $tags = array('happy','alleluia','sunday','good','clapping');
     $rand_keys = $tags[array_rand($tags, 1)];
 
 	echo'<p class="jours" aria-label="Dimanche">On est <b>Dimanche<b></p>';
