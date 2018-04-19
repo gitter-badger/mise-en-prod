@@ -7,8 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="Content-Type" content="UTF-8">
 <meta name="Content-Language" content="fr">
-<link rel="shortcut icon" href="favicon.ico">
-<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="shortcut icon" href="img/favicon.ico">
+<link rel="stylesheet" type="text/css" href="style/style.css">
 <style>
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Tajawal');
 </style>
@@ -17,6 +17,14 @@
 
 <?php
 
+// Start the session
+ob_start();
+session_start();
+
+// Check to see if actually logged in. If not, redirect to login page
+if (!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] == false) {
+    header("Location: connexion.php");
+}
 echo "<p class='titre'>Adresse IP des visiteurs</p>";
 echo "<br>";
 
