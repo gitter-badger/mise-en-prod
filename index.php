@@ -21,8 +21,8 @@
 <meta name="Distribution" content="global">
 <meta name="Geography" content="63000">
 <meta name="Category" content="games">
-<link rel="shortcut icon" href="favicon.ico">
-<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="shortcut icon" href="img/favicon.ico">
+<link rel="stylesheet" type="text/css" href="style/style.css">
 <style>
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Tajawal');
 </style>
@@ -32,7 +32,7 @@
 
 <?php
 
-    include 'functions.php';
+    include 'php/functions.php';
 
 	echo"<p class='titre'>Est-ce qu'on met en prod aujourd'hui ?</p>";
 
@@ -93,7 +93,7 @@ if (date("l")=="Monday"){
     $rand_keys = $tags[array_rand($tags, 1)];
 
     echo'<p class="jeudi" aria-label="Jeudi">On est <b>Jeudi<b></p>';
-    echo'<p class="commentairePositif" aria-label="Commentaire Jeudi"><b><i>Hmm, tu penses que ca passe ?'.$emojiHtml.'<i><b></p>';
+    echo'<p class="commentairePositif" aria-label="Commentaire Jeudi"><b><i>Hmm, tu penses que ca passe ?'.'<i><b>'.$emojiHtml.'</p>';
     echo'<p class="gifs">'.RandomGiphy($rand_keys).'</p>';
 
 }else if (date("l")=="Friday"){
@@ -148,7 +148,7 @@ if (date("l")=="Monday"){
         IpVisiteur();
 
 	// récupération infos compteurs
-        $compteur_f = fopen('compteur.txt', 'r+');
+        $compteur_f = fopen('log/compteur.txt', 'r+');
         $compte = fgets($compteur_f);
 
     // affichage page
@@ -156,7 +156,7 @@ if (date("l")=="Monday"){
 	echo'<p class="compteurs" aria-label="compteur de vues">2018 - page vues '.$compte.' fois</p>';
 	echo'<p class="mentions"><a href="https://www.estcequonmetenprodaujourdhui.info/" aria-label="Idée Originale">idée originale : estcequonmetenprodaujourdhui.info</a></p>';
 	echo'<p class="mentions"><a href="https://github.com/MehdyDriouech/mise-en-prod" aria-label="Dépot Github">Github </a></p>';
-	echo'<p class="mentions"><a href="http://giphy.com" aria-label="giphy">Powered by GiphyAPI</a></p>';
+	echo'<p class="mentions"><a href="http://giphy.com" aria-label="giphy"><img src="img/GiphyAttribution.png"></a></p>';
 
 	
 ?>

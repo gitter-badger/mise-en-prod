@@ -61,3 +61,57 @@
 	font-size:0.7em;
 	font-family: Open Sans, sans-serif;
 }
+
+/* Responsive */
+
+
+
+@media screen and (max-width: 1100px)
+{
+	.titre {
+		text-align:center;
+		margin-top:5%;
+		font-size:2em;
+		text-decoration: underline;
+		font-family: Open Sans, sans-serif;
+	}
+
+	.jours{
+		text-align:center;
+		margin-top:-3%;
+		font-size:1.5em;
+		color: green;
+		font-family: Tajawal, sans-serif;
+	}
+
+	.commentairePositif{
+		text-align:center;
+		margin-top: -5%;
+		font-size:1em;
+		font-family: Montserrat, sans-serif;
+	}
+
+	.jeudi{
+		text-align:center;
+		margin-top:-3%;
+		font-size:1.5em;
+		color: orange;
+		font-family: Tajawal, sans-serif;
+	}
+
+	.vendredi{
+		text-align:center;
+		margin-top:-3%;
+		font-size:1.5em;
+		color: red;
+		font-family: Tajawal, sans-serif;
+	}
+
+	.commentaireVendredi{
+		text-align:center;
+		margin-top: -5%;
+		font-size:1em;
+		color: red;
+		font-family: Montserrat, sans-serif;
+	}
+}

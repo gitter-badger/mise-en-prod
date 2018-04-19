@@ -17,7 +17,7 @@
 
 
 <?php 
-$fichier = 'compteur.txt'; 
+$fichier = 'log/compteur.txt';
 
 if ( (file_exists($fichier)) && (is_readable($fichier)) ){ 
    $text = file_get_contents($fichier); 

@@ -20,7 +20,7 @@
 echo "<p class='titre'>Adresse IP des visiteurs</p>";
 echo "<br>";
 
-$array = file("ip.txt");
+$array = file("log/ip.txt");
 foreach($array as $line)
        {
            echo "<p class='mentions' style='text-align:justify; margin-left:1%; font-size:1em;'>".$line."</p>";
