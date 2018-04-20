@@ -85,11 +85,11 @@ function RandomGiphy($tag){
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         $response = curl_exec($ch);
         $resultData = json_decode($response, true);
-        $rand = rand(0,20);
+        $rand = rand(0,10);
 
 
         $gifGet=$resultData[data][$rand][embed_url];
-        echo "<p style='display: block; margin: 0 auto; width: 25%;'>"."<iframe src=".$gifGet." width='500' height='500'></iframe>"."</p>";
+        echo "<p style='display: block; margin: 0 auto; width: 25%;'>"."<iframe src=".$gifGet." width='500' height='500' frameBorder=\"0\"></iframe>"."</p>";
 
     } catch (Exception $e) {
         echo 'Exception reçue : ',  $e->getMessage(), "\n";

@@ -39,8 +39,8 @@
 if (date("l")=="Monday"){
 
     //gif array + random generation
-    $tags = array('happy','yeah','youhou','cool');
-    $rand_keys = array_rand($tags, 2);
+    $tags = array('happy','yeah');
+    $rand_keys = $tags[array_rand($tags, 1)];
 
     echo'<p class="jours" aria-label="Lundi">On est <b>Lundi<b></p>';
     echo'<p class="commentairePositif" aria-label="Commentaire mercredi"><b>OUI tu peux<b></p>';
@@ -49,20 +49,21 @@ if (date("l")=="Monday"){
 }else if (date("l")=="Tuesday"){
 
     //gif array + random generation
-    $tags = array('happy','yeah','youhou','cool');
-    $rand_keys = array_rand($tags, 2);
+    $tags = array('happy','yeah');
+    $rand_keys = $tags[array_rand($tags, 1)];
 
-    echo'<p class="jours" aria-label="Dimanche">On est <b>Mardi<b></p>';
+    echo'<p class="jours" aria-label="Mardi">On est <b>Mardi<b></p>';
     echo'<p class="commentairePositif" aria-label="Commentaire mercredi"><b>OUI tu peux<b></p>';
     echo'<p class="gifs">'.RandomGiphy($rand_keys).'</p>';
 
 }else if (date("l")=="Wednesday"){
 
     //gif array + random generation
-    $tags = array('happy','yeah','youhou','cool');
-    $rand_keys = array_rand($tags, 2);
 
-    echo'<p class="jours" aria-label="Dimanche">On est <b>Mercredi<b></p>';
+    $tags = array('happy','yeah');
+    $rand_keys = $tags[array_rand($tags, 1)];
+
+    echo'<p class="jours" aria-label="Mercredi">On est <b>Mercredi<b></p>';
     echo'<p class="commentairePositif" aria-label="Commentaire mercredi"><b>OUI tu peux<b></p>';
     echo'<p class="gifs">'.RandomGiphy($rand_keys).'</p>';
 
@@ -70,17 +71,17 @@ if (date("l")=="Monday"){
 
     //gif array + random generation
     $tags = array('maybe','sure?','ahem','well');
-    $rand_keys = array_rand($tags, 2);
+    $rand_keys = $tags[array_rand($tags, 1)];
 
-    echo'<p class="jeudi" aria-label="Dimanche">On est <b>Mercredi<b></p>';
-    echo'<p class="commentaireJeudi" aria-label="Commentaire Jeudi"><b><i>Hmm, tu penses que ca passe ?<i><b></p>';
+    echo'<p class="jeudi" aria-label="Jeudi">On est <b>Jeudi<b></p>';
+    echo'<p class="commentairePositif" aria-label="Commentaire Jeudi"><b><i>Hmm, tu penses que ca passe ?<i><b></p>';
     echo'<p class="gifs">'.RandomGiphy($rand_keys).'</p>';
 
 }else if (date("l")=="Friday"){
 
     //gif array + random generation
     $tags = array('nope','no','hell','fire');
-    $rand_keys = array_rand($tags, 2);
+    $rand_keys = $tags[array_rand($tags, 1)];
 
     echo'<p class="vendredi" aria-label="Vendredi"<b>ON EST VENDREDI<b></p>';
     echo'<p class="commentaireVendredi" aria-label="Commentaire Vendredi"><b>NON NON NON NON<b></p>';
@@ -90,8 +91,8 @@ if (date("l")=="Monday"){
 }else if (date("l")=="Saturday"){
 
     //gif array + random generation
-    $tags = array('happy','yeah','youhou','cool');
-    $rand_keys = array_rand($tags, 2);
+    $tags = array('happy','yeah');
+    $rand_keys = $tags[array_rand($tags, 1)];
 
     echo'<p class="jours" aria-label="Samedi">On est <b>samedi<b></p>';
     echo'<p class="commentairePositif" aria-label="commentaire Samedi"><b>Tu bosses ?<b></p>';
@@ -100,8 +101,8 @@ if (date("l")=="Monday"){
 }else if (date("l")=="Sunday"){
 
 	//gif array + random generation
-	$tags = array('happy','yeah','youhou','cool');
-	$rand_keys = array_rand($tags, 2);
+    $tags = array('happy','yeah');
+    $rand_keys = $tags[array_rand($tags, 1)];
 
 	echo'<p class="jours" aria-label="Dimanche">On est <b>Dimanche<b></p>';
 	echo'<p class="commentairePositif" aria-label="Commentaire Dimanche"><b>Le jour du seigneur on ne travail pas normalement...<b></p>';
