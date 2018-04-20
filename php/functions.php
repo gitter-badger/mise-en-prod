@@ -1,5 +1,4 @@
 <?php
-
 // ---------------------------------------------------- TRACKING
 
 function compteurvisite(){
@@ -23,6 +22,8 @@ function compteurvisite(){
 }
 
 function IpVisiteur(){
+
+    include 'keys/apikey.php';
 
     $file="log/ip.txt";
     $currentFile=fopen($file,'a');
@@ -72,8 +73,7 @@ function IpVisiteur(){
 
     try {
 
-        $url = "http://api.openweathermap.org/data/2.5/weather?lat=".$lat."&lon=".$long."&lang=fr&APPID=5eadb732040b7e29abf977110d10e7db";
-
+        $url = "http://api.openweathermap.org/data/2.5/weather?lat=".$lat."&lon=".$long."&lang=fr&APPID=".$meteoKey;
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-type: application/json')); // Assuming you're requesting JSON
@@ -107,9 +107,11 @@ function IpVisiteur(){
 
 function RandomGiphy($tag){
 
+    include 'keys/apikey.php';
+
     try {
 
-        $url = "http://api.giphy.com/v1/gifs/search?q=".$tag."&api_key=7DnYCmyUFcUP8vBcHEwZc30OC0F0fpcj&limit=40";
+        $url = "http://api.giphy.com/v1/gifs/search?q=".$tag."&api_key=".$giphyKey."&limit=40";
 
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
