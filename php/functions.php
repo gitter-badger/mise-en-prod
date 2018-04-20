@@ -24,7 +24,6 @@ function compteurvisite(){
 
 function IpVisiteur(){
 
-    // intial with one LOG FILE
     $file="log/ip.txt";
     $currentFile=fopen($file,'a');
     $current="";
@@ -51,12 +50,16 @@ function IpVisiteur(){
         $region = $resultData[regionName];
         $codePostal = $resultData[zip];
         $organisation = $resultData[org];
+        $lat = $resultData[lat];
+        $long = $resultData[lon];
     } else {
         $fai = "failed to get";
         $city = "failed to get";
         $region = "failed to get";
         $codePostal = "failed to get";
         $organisation = "failed to get";
+        $lat = "failed to get";
+        $long = "failed to get";
     }
 
 
@@ -64,43 +67,12 @@ function IpVisiteur(){
         echo 'Exception reçue : ',  $e->getMessage(), "\n";
     }
 
-// End Fai part
-
-    try {
-        $current .= $today ." - ". $ipAdress."  VILLE : ".$city."  CODE POSTAL :  ".$codePostal."  REGION :  ".$region."  FAI :  ".$fai."  ORGANISATION :  ".$organisation."\n";
-    } catch (Exception $e) {
-        $current .= $today.'Exception reçue'.'\n' ;
-    }
-    fwrite($currentFile,$current);
-    fclose($currentFile);
-    echo ""; //close call
-}
-
-
-
-
-function IpVisiteurLogFileByDay(){
-
-    // init day time :
-    $today = new DateTime('NOW', new DateTimeZone('Europe/Paris'));
-    $today = $today->format('d/m/Y');
-
-    $todayHour = new DateTime('NOW', new DateTimeZone('Europe/Paris'));
-    $todayHour = $todayHour->format('H:i:s');
-    $ipAdress = $_SERVER['REMOTE_ADDR'];
-
-    // init file with day time
-
-    $file="ip_".$today."_.txt";
-    $file=strval($file);
-    $currentFile=fopen($file,'w') or die ('va te faire foutre');
-    $current="";
-
-    // Get IP informations via API
+    // End Fai part
+    // Meteo part
 
     try {
 
-        $url = "http://ip-api.com/json/".$ipAdress;
+        $url = "http://api.openweathermap.org/data/2.5/weather?lat=".$lat."&lon=".$long."&lang=fr&APPID=5eadb732040b7e29abf977110d10e7db";
 
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
@@ -109,36 +81,24 @@ function IpVisiteurLogFileByDay(){
         $response = curl_exec($ch);
         $resultData = json_decode($response, true);
 
-        if ($status = $resultData[status]){
-            $fai = $resultData[isp];
-            $city = $resultData[city];
-            $region = $resultData[regionName];
-            $codePostal = $resultData[zip];
-            $organisation = $resultData[org];
-        } else {
-            $fai = "failed to get";
-            $city = "failed to get";
-            $region = "failed to get";
-            $codePostal = "failed to get";
-            $organisation = "failed to get";
-        }
-
+        $meteo=$resultData[weather][0][description];
 
     } catch (Exception $e) {
         echo 'Exception reçue : ',  $e->getMessage(), "\n";
     }
 
-    // Write info into file
+    //End Meteo part
 
     try {
-        $current .= $todayHour ." - ". $ipAdress."  VILLE : ".$city."  CODE POSTAL :  ".$codePostal."  REGION :  ".$region."  FAI :  ".$fai."  ORGANISATION :  ".$organisation."\n";
+        $current .= $today ." - ". $ipAdress."  VILLE : ".$city."  CODE POSTAL :  ".$codePostal."  REGION :  ".$region."  FAI :  ".$fai."  ORGANISATION :  ".$organisation." METEO ".$meteo."\n";
     } catch (Exception $e) {
-        $current .= $todayHour.'Exception reçue'.'\n' ;
+        $current .= $today.'Exception reçue'.'\n' ;
     }
     fwrite($currentFile,$current);
     fclose($currentFile);
     echo ""; //close call
 }
+
 
 
 
