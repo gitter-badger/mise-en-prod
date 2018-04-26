@@ -36,32 +36,32 @@ function IpVisiteur(){
 
     try {
 
-    $url = "http://ip-api.com/json/".$ipAdress;
+        $url = "http://ip-api.com/json/".$ipAdress;
 
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, $url);
-    curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-type: application/json')); // Assuming you're requesting JSON
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-    $response = curl_exec($ch);
-    $resultData = json_decode($response, true);
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-type: application/json')); // Assuming you're requesting JSON
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        $response = curl_exec($ch);
+        $resultData = json_decode($response, true);
 
-    if ($status = $resultData[status]){
-        $fai = $resultData[isp];
-        $city = $resultData[city];
-        $region = $resultData[regionName];
-        $codePostal = $resultData[zip];
-        $organisation = $resultData[org];
-        $lat = $resultData[lat];
-        $long = $resultData[lon];
-    } else {
-        $fai = "failed to get";
-        $city = "failed to get";
-        $region = "failed to get";
-        $codePostal = "failed to get";
-        $organisation = "failed to get";
-        $lat = "failed to get";
-        $long = "failed to get";
-    }
+        if ($status = $resultData[status]){
+            $fai = $resultData[isp];
+            $city = $resultData[city];
+            $region = $resultData[regionName];
+            $codePostal = $resultData[zip];
+            $organisation = $resultData[org];
+            $lat = $resultData[lat];
+            $long = $resultData[lon];
+        } else {
+            $fai = "failed to get";
+            $city = "failed to get";
+            $region = "failed to get";
+            $codePostal = "failed to get";
+            $organisation = "failed to get";
+            $lat = "failed to get";
+            $long = "failed to get";
+        }
 
 
     } catch (Exception $e) {
@@ -123,7 +123,7 @@ function RandomGiphy($tag){
 
 
         $gifGet=$resultData[data][$rand][embed_url];
-        echo "<p style='display: block; margin: 0 auto; width: 400px;'>"."<iframe name='GiphyGif' src=".$gifGet." width='400' height='400' frameBorder=\"0\"></iframe>"."</p>";
+        echo "<p style='display: block; margin: 0 auto; width: 400px;'>"."<iframe name='GiphyGif' src=".$gifGet." width='400' height='400' style='border:0' ></iframe>"."</p>";
 
     } catch (Exception $e) {
         echo 'Exception reçue : ',  $e->getMessage(), "\n";
