@@ -1,5 +1,8 @@
 # mise-en-prod
 
+[![Join the chat at https://gitter.im/mise-en-prod/Lobby](https://badges.gitter.im/mise-en-prod/Lobby.svg)](https://gitter.im/mise-en-prod/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
+
 - Original idea : estcequonmetenprodaujourdhui.info
 - Gifs : giphy.com - API Interraction
 - maintainer : DRIOUECH Mehdy : contact@mehdydriouech.fr
